@@ -1,0 +1,11 @@
+name: RapidLM
+channels:
+  - menpo
+dependencies:
+  - numpy
+  - opencv3
+  - vtk
+  - pip
+  - pip:
+    - dlib
+    - face-recognition
