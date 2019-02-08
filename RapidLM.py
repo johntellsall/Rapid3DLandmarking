@@ -26,10 +26,10 @@ def _identify_3D_landmarks(mesh):
     image = scene.captureImage()
 
     landmarks_2d = _identify_2D_landmarks(image)
-    _check_landmarks_2d(image, landmarks_2d)
+    #_check_landmarks_2d(image, landmarks_2d)
 
     landmarks_3d = [scene.pickPoint(point_2d) for point_2d in landmarks_2d]
-    _check_landmarks_3d(mesh, landmarks_3d)
+    #_check_landmarks_3d(mesh, landmarks_3d)
 
 
     # recompute the camera position for better landmarks
@@ -39,10 +39,10 @@ def _identify_3D_landmarks(mesh):
     image = scene.captureImage()
 
     landmarks_2d = _identify_2D_landmarks(image)
-    _check_landmarks_2d(image, landmarks_2d)
+    #_check_landmarks_2d(image, landmarks_2d)
 
     landmarks_3d = [scene.pickPoint(point_2d) for point_2d in landmarks_2d]
-    _check_landmarks_3d(mesh, landmarks_3d)
+    #_check_landmarks_3d(mesh, landmarks_3d)
 
     return landmarks_3d
 
@@ -229,12 +229,6 @@ def _save_landmarks(landmarks, filename):
     np_landmarks = np.asarray(landmarks)
 
     np.savetxt(landmark_file, np_landmarks)
-
-    print(landmarks)
-    print(np_landmarks)
-
-    print(len(landmarks))
-    print(np_landmarks.shape)
 
 
 def _read_mesh(mesh_file):
